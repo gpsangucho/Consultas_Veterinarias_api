@@ -17,8 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-#from usuarios.views.auth_views import MyTokenObtainPairView
-#from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+from usuarios.views.auth_views import MyTokenObtainPairView
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,7 +30,7 @@ urlpatterns = [
     path('api/atencion/', include('atencion_citas.urls')),
     
     #path('api/jwt/create/', TokenObtainPairView.as_view(), name='jwt_create'),
-    #path('api/jwt/create/', MyTokenObtainPairView.as_view(), name='jwt_create'),
-    #path('api/jwt/refresh/', TokenRefreshView.as_view(), name='jwt_refresh'),
+    path('api/jwt/create/', MyTokenObtainPairView.as_view(), name='jwt_create'),
+    path('api/jwt/refresh/', TokenRefreshView.as_view(), name='jwt_refresh'),
 
 ]

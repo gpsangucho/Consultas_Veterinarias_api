@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
-#from datetime import timedelta
+from datetime import timedelta # Para la seguridad. Cometar si no se usa en JWT
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -44,8 +44,9 @@ INSTALLED_APPS = [
     'gestion_recursos',
     'usuarios',
     'mascotas',
-#    'rest_framework',
-#    'rest_framework_simplejwt.token_blacklist',  # opcional, para logout/revocar refresh
+    
+    'rest_framework',
+    'rest_framework_simplejwt.token_blacklist',  # opcional, para logout/revocar refresh
 
 ]
 
@@ -148,23 +149,23 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #    ],
 #}
 
-#REST_FRAMEWORK = {
-#    'DEFAULT_AUTHENTICATION_CLASSES': (
-#        'rest_framework_simplejwt.authentication.JWTAuthentication',
-#    ),
-#    'DEFAULT_PERMISSION_CLASSES': (
-#        'rest_framework.permissions.IsAuthenticated',
-#    ),
-#}
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+}
 #SIMPLE_JWT = {
 #    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
 #    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 #}
 
-#SIMPLE_JWT = {
-#    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
-#    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
-#    'ROTATE_REFRESH_TOKENS': False,       # si true rota refresh al refrescar
-#    'BLACKLIST_AFTER_ROTATION': True,     # si rota, blacklistea el refresh anterior
-#    'AUTH_HEADER_TYPES': ('Bearer',),
-#}
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'ROTATE_REFRESH_TOKENS': False,       # si true rota refresh al refrescar
+    'BLACKLIST_AFTER_ROTATION': True,     # si rota, blacklistea el refresh anterior
+    'AUTH_HEADER_TYPES': ('Bearer',),
+}
