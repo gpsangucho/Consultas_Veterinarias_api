@@ -18,6 +18,7 @@ Pasos realizados
 
 Version 2:
 15.- Implementacion de JWT:
+  - Instalar: pip install djangorestframework-simplejwt
   - setting del proyecto: Agregar
     * REST_FRAMEWORK 
     * SIMPLE_JWT
@@ -34,7 +35,7 @@ Version 2:
   - Aplicamos cambios y probamos
     * python manage.py makemigrations
     * python manage.py migrate
-16: POSTMAN: 
+16: PRUEBAS POSTMAN: 
   * POST: 127.0.0.1:8000/api/jwt/create/
   * BODY: {
             "username": "gsangucho",

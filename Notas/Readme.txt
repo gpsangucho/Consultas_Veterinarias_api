@@ -44,8 +44,8 @@ DB_PORT=5432
 JWT_ACCESS_MINUTES=60
 JWT_REFRESH_DAYS=7
 
-- Subir el gestor de BDD y crear la BDD indicada en el punto anterior.
-- 
+- Subir el gestor de BDD pgadmin Postgres y crear la BDD indicada en el punto anterior.
+
 - Sincronizar y actualizar la BDD:
 (.venv) PS C:\proy\_repositorio\proyecto> python manage.py makemigrations
 (.venv) PS C:\proy\_repositorio\proyecto> python manage.py migrate

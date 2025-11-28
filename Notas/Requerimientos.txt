@@ -1,0 +1,19 @@
+REQUERIMIENTOS TECNICOS
+
+* Hardware:
+	PC Gen10 o superior.
+
+* Software para PC:
+
+- VisualStudioCode
+	Versión: 1.106.3 o superior
+- SO: Window_NT x64 10.0.26200 o superior
+- Node-js 22.20.0
+- Postman
+
+* Paquetes de software en VSCode
+
+- Entorno virtual: python -m venv .venv
+
+- Paquetes Python y django: pip install django djangorestframework djangorestframework-simplejwt django-filter python-dotenv psycopg2-binary  psycopg2-binary python-dotenv
+
