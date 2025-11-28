@@ -1,0 +1,68 @@
+README FOR USE
+
+ANTES DE:
+- Datos:
+	*Repositorio: https://github.com/gpsangucho/Consultas_Veterinarias_api.git
+	* Proyecto: consultas_veterinarias
+
+INSTALACIÓN
+- Crear una carpeta para la app
+C:\>cd .\proy
+
+- Clonar el repositorio:
+git clone _repositorio
+
+
+- Ingresar al repositorio
+C:\proy> cd .\_repositorio
+
+- Levantar el entorno virtual
+C:\proy\_repositorio> python -m venv .venv
+
+- Activar el entorno virtual
+C:\proy\_repositorio> .venv\Scripts\activate
+
+- Instalar dependencias:
+(.venv) PS C:\proy\_repositorio> pip install django djangorestframework djangorestframework-simplejwt django-filter python-dotenv psycopg2-binary  psycopg2-binary python-dotenv
+
+- Ingresar al proyecto
+(.venv) PS C:\proy\_repositorio> cd .\proyecto
+(.venv) PS C:\proy\_repositorio\proyecto>
+
+- Configurar la conexión a la BDD local: .env y en setting
+ 
+SECRET_KEY=super-secret-key
+DEBUG=True
+ALLOWED_HOSTS=*
+
+DB_NAME=programacion4_db <-- Bdd creada en su gestor de BDD
+DB_USER=postgres <-- User de su Gestor de BDD
+DB_PASS=root	 <-- Password de su Gestor de BDD
+DB_HOST=127.0.0.1
+DB_PORT=5432
+
+JWT_ACCESS_MINUTES=60
+JWT_REFRESH_DAYS=7
+
+- Subir el gestor de BDD y crear la BDD indicada en el punto anterior.
+- 
+- Sincronizar y actualizar la BDD:
+(.venv) PS C:\proy\_repositorio\proyecto> python manage.py makemigrations
+(.venv) PS C:\proy\_repositorio\proyecto> python manage.py migrate
+
+- Correr el servidor.
+(.venv) PS C:\proy\_repositorio\proyecto> python manage.py runserver
+
+- Abrir Postman y cargar  la colección ubicada en la carpeta "Otros" del repositorio y probar el CRUD
+- Uso de postman:
+1.- Crear Especialidades (App-Usuarios)
+2.- Crear Médicos (App-Usuarios)
+3.- Crear Cliente (App-Usuarios)
+4.- Crear mascota (App-Mascotas)
+5.- Crear Salas (App-Gestion_citas)
+6.- Crear Citas (App-Gestion_citas)
+7.- Crear medicamento (App-atención)
+8.- Crear Historial (App-atención)
+9.- Crear Prescripción (App-atención)
+10.- Crear Factura (App-recursos)
+

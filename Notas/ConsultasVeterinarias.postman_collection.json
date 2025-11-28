@@ -1,0 +1,731 @@
+{
+	"info": {
+		"_postman_id": "82d79e13-9057-4dd4-a21e-085fd1473379",
+		"name": "ConsultasVeterinarias",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44800460",
+		"_collection_link": "https://german-6307193.postman.co/workspace/Consultas_veterinarias~0c19ed82-1209-47e1-a840-c02ff28ec349/collection/44800460-82d79e13-9057-4dd4-a21e-085fd1473379?action=share&source=collection_link&creator=44800460"
+	},
+	"item": [
+		{
+			"name": "5. App Recursos",
+			"item": [
+				{
+					"name": "Post-Factura",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"cita\": 2, \r\n    \"monto\": 1500.0, \r\n    \"fecha\": \"2025-11-01\",\r\n    \"estado\":\"pagado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/recursos/facturas/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"recursos",
+								"facturas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-Factura",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"cita\": 2, \r\n    \"monto\": 1500.0, \r\n    \"fecha\": \"2025-11-01\",\r\n    \"estado\":\"pagado\"\r\n}"
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/recursos/facturas/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"recursos",
+								"facturas",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "1. App-Usuarios",
+			"item": [
+				{
+					"name": "Medicos",
+					"item": [
+						{
+							"name": "Post Veterinarios",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"nombre\": \"Dr. Joss Curs\", \r\n    \"email\": \"jcurs@mail.com\", \r\n    \"especialidad\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/usuarios/medicos/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"usuarios",
+										"medicos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Veterinarios",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"nombre\": \"Dr. Jorge Chill\", \r\n    \"email\": \"jchill@mail.com\", \r\n    \"especialidad\": 1 \r\n}"
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/usuarios/medicos/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"usuarios",
+										"medicos",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Especialidad",
+					"item": [
+						{
+							"name": "Especialidad",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Larinlorogo de perros\", \r\n    \"descripcion\":\"Especialista\",\r\n    \"tarifa_base\": \"600\"\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/usuarios/especialidades/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"usuarios",
+										"especialidades",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Especialidades",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/api/usuarios/especialidades/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"usuarios",
+										"especialidades",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cliente",
+					"item": [
+						{
+							"name": "Cliente",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"nombre\": \"Jhony Pereira\",\r\n    \"email\": \"jpereira@mail.com\",\r\n    \"telefono\": \"0996979993\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/usuarios/clientes/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"usuarios",
+										"clientes",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Clientes",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/api/usuarios/clientes/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"usuarios",
+										"clientes",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/api/usuarios/clientes/2/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"usuarios",
+										"clientes",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "4. App-atencion",
+			"item": [
+				{
+					"name": "Medicamentos",
+					"item": [
+						{
+							"name": "Get-Medicina",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"nombre\": \"ivermectina\", \"dosis\": \"500mg\",\"presentacion\":\"cápsulas\",\"descripcion\":\"Antiparasitario\"}"
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/atencion/medicamentos/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"atencion",
+										"medicamentos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post-Medicinas",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"nombre\": \"ivermectina\", \"dosis\": \"500mg\",\"presentacion\":\"cápsulas\",\"descripcion\":\"Antiparasitario\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/atencion/medicamentos/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"atencion",
+										"medicamentos",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Prescripciones",
+					"item": [
+						{
+							"name": "Get-prescripciones",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/api/atencion/prescripciones/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"atencion",
+										"prescripciones",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Prescripciones",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"historial\": 3,\r\n  \"medicamento\": 3,\r\n  \"dosis\": \"600 mg\",\r\n  \"frecuencia\": \"Cada 8 horas\",\r\n  \"duracion\": \"7 días\",\r\n  \"indicaciones\": \"Tomar después de las comidas\",\r\n  \"prescrito_por\": \"Dr. Perrasso\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/atencion/prescripciones/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"atencion",
+										"prescripciones",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Historial",
+					"item": [
+						{
+							"name": "Historiales",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"cita\": 3,\r\n  \"sintomas\": \"Se razca la cola\",\r\n  \"diagnostico\": \"parásitos\",\r\n  \"tratamiento\": \"tomar Antiparasitario\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/atencion/historiales/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"atencion",
+										"historiales",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get-historial",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"cita\": 3,\r\n  \"sintomas\": \"Se razca la cola\",\r\n  \"diagnostico\": \"parásitos\",\r\n  \"tratamiento\": \"tomar Antiparasitario\"\r\n}"
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/atencion/historiales/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"atencion",
+										"historiales",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "3. App-Gestion_citas",
+			"item": [
+				{
+					"name": "Salas",
+					"item": [
+						{
+							"name": "POST-Sala",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Sala B\",\r\n    \"capacidad\": 4,\r\n    \"ubicacion\":\"2P\",\r\n    \"estado\":\"libre\" \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/citas/salas/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"citas",
+										"salas",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET-Salas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/api/citas/salas",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"citas",
+										"salas"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Citas",
+					"item": [
+						{
+							"name": "Post Citas",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"mascota\": 2,\r\n    \"medico\": 1,\r\n    \"sala\": 3,\r\n    \"fecha\": \"2025-12-15\",\r\n    \"hora\": \"10:30\",\r\n    \"motivo\":\"Patalea\",\r\n    \"estado\":\"agendada\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/citas/citas/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"citas",
+										"citas",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get-Citas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/api/citas/citas/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"citas",
+										"citas",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "2. App-Mascotas",
+			"item": [
+				{
+					"name": "Post-Mascota",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"nombre\": \"Dinky\", \"edad\": 2,\"raza\":\"pastor alemán\",\"especie\": \"perro\",\"cliente\": 3}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/mascotas/mascotas/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"mascotas",
+								"mascotas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Mascotas",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8000/api/mascotas/mascotas/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"mascotas",
+								"mascotas",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
